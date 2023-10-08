@@ -6,6 +6,6 @@ interface IButton {
 
 export default function AnchorButton({text}: IButton): JSX.Element {
   return (
-    <Button>{text}</Button>
+    <Button href="/timeline">{text}</Button>
   )
 }
