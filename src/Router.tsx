@@ -1,13 +1,16 @@
-import { Route, Routes } from 'react-router-dom';
-
-import Home from './pages/Home';
-import TimeLine from './pages/TimeLine';
+import { PageContext } from "./contexts/PageContext"
+import Home from "./pages/Home"
+import TimeLine from "./pages/TimeLine"
+import {useContext} from 'react'
 
 export default function Router() {
+
+  const {page} = useContext(PageContext)
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/timeline" element={<TimeLine />} />
-    </Routes>
-  );
+    <>
+      {page === '/' && (<Home/>)}
+      {page === '/timeline' && (<TimeLine/>)}
+    </>
+  )
 }

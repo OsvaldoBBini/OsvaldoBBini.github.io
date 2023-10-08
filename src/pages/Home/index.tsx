@@ -1,7 +1,8 @@
 import fahor from '../../assets/images/fahor.png'
-import AnchorButton from '../../components/AnchorButton'
+import NavegateButton from '../../components/NavegateButton'
 
 import { ComponentsContainer, Container, HomeTitleContainer, ImageContainer} from './styles'
+
 
 export default function Home(): JSX.Element {
   return (
@@ -10,7 +11,7 @@ export default function Home(): JSX.Element {
         <HomeTitleContainer>
           <h1>AgileFahor</h1>
           <p>Sua jornada no mundo ágil começa aqui!!!</p>
-          <AnchorButton text={'Inicar Jornada...'}/>
+          <NavegateButton text={'Inicar Jornada...'} destiny='/timeline'/>
         </HomeTitleContainer>
         <ImageContainer>
           <img src={fahor} alt='logo fahor'/>
