@@ -5,7 +5,6 @@ export const Button = styled.button`
   text-decoration: none;
   background: #ffff;
   text-align: center;
-  width: 60%;
   cursor: pointer;
   color: ${({ theme }) => theme.colors.primary.dark};
   font-weight: 700;
