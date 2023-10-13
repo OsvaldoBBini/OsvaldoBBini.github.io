@@ -29,6 +29,7 @@ export const TextTitle = styled.div`
   background: #ffff;
   color: ${({ theme }) => theme.colors.primary.dark};
   font-weight: 700;
+  align-items: center;
   padding: 0.8rem 0.8rem;
   border-radius: 10px;
   box-shadow: 10px 10px rgba(0,0,0,0.75);

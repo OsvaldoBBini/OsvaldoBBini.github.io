@@ -1,6 +1,6 @@
 import NavegateButton from "../../components/NavegateButton"
 import PopupContent from "../../components/PopupContent"
-import { Container, HeaderContainer, TimeLineContainer } from "./styles"
+import { Container } from "./styles"
 
 const texts = [
   {
@@ -12,10 +12,10 @@ const texts = [
               pela dificuldade de registrar feedbacks e alterações durant o ciclo
               de vida do projeto`,
     gridDirections: {
-      columnStart: 1,
-      columnEnd: 1,
-      rowStart: 2,
-      rowEnd: 2,
+      columnStart: 5,
+      columnEnd: 6,
+      rowStart: 5,
+      rowEnd: 6,
     }
   },
   {
@@ -26,9 +26,9 @@ const texts = [
               estabeleceu como um framework distinto ao metodo cascata considerando rodadas de revisão
               com os clientes e com os próprios desenvoldores para estabelecer melhorias aos sistemas`,
     gridDirections: {
-      columnStart: 3,
-      columnEnd: 3,
-      rowStart: 6,
+      columnStart: 6,
+      columnEnd: 7,
+      rowStart: 5,
       rowEnd: 6,
     }
   },
@@ -42,10 +42,10 @@ const texts = [
               as diretrizes e os pontos mais importantes ao desenvolverem novos produtos
               visando a entrega de valor real aos seus clientes`,
     gridDirections: {
-      columnStart: 5,
-      columnEnd: 5,
-      rowStart: 1,
-      rowEnd: 1,
+      columnStart: 7,
+      columnEnd: 8,
+      rowStart: 5,
+      rowEnd: 6,
     }
   },
   {
@@ -56,10 +56,10 @@ const texts = [
               Trata-se de um sistema visual que busca gerenciar o trabalho conforme ele se move pelo processo
               tendo uso em diversos setores, projetos e outras metodologias`,
     gridDirections: {
-      columnStart: 6,
-      columnEnd: 6,
-      rowStart: 7,
-      rowEnd: 7,
+      columnStart: 8,
+      columnEnd: 9,
+      rowStart: 5,
+      rowEnd: 6,
     }
   },
   {
@@ -68,10 +68,10 @@ const texts = [
     content: `O uso de práticas ágeis vem se espalhando para além do desenvolvimento de software
               ,sendo adotado em áreas como marketing, recursos humanos e gerenciamento de projetos`,
     gridDirections: {
-      columnStart: 8,
-      columnEnd: 8,
-      rowStart: 4,
-      rowEnd: 4,
+      columnStart: 9,
+      columnEnd: 10,
+      rowStart: 5,
+      rowEnd: 6,
     }
   },
 ]
@@ -79,14 +79,11 @@ const texts = [
 export default function TimeLine(): JSX.Element {
   return (
     <Container>
-      <HeaderContainer>
-        <h1>Marcos das metodologias ágeis:</h1>
-        <p>As metodologias ágeis surgiram como solução para tratar dos problemas gerados
+        <h1 className="title">Marcos das metodologias ágeis:</h1>
+        <p className="title-text">As metodologias ágeis surgiram como solução para tratar dos problemas gerados
           pelas mudanças rápidas e repentinas que os projetos enfrentvam,
           assim iniciou-se a busca por métodos alternativos a métodos como waterfall,
           estes métodos ágeis são recentes, assim alguns desses marcos apresentam-se a seguir</p>
-      </HeaderContainer>
-      <TimeLineContainer>
         {texts.map((text) => 
           <PopupContent 
             title={text.title} 
@@ -100,7 +97,6 @@ export default function TimeLine(): JSX.Element {
         <div className="foward">
           <NavegateButton text="Avançar" destiny="/"/>
         </div>
-      </TimeLineContainer>
     </Container>
   )
 }
