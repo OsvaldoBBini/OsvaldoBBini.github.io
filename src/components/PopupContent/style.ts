@@ -46,14 +46,15 @@ export const TextContent = styled.div<ITextContent>`
   border-radius: 10px;
   box-shadow: 10px 10px rgba(0,0,0,0.75);
   opacity: ${({ opacity }) => opacity};
-  width: 20rem;
+  width: 30rem;
   position: absolute;
   top: 6rem;
-  z-index: 10;
+  left: -8rem;
+  z-index: ${({ opacity }) => opacity === 1 ? 10 : -1};
   transition: all 0.4s ease-in;
 
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     text-align: center;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
@@ -62,5 +63,6 @@ export const TextContent = styled.div<ITextContent>`
 
   p {
     text-align: center;
+    font-size: 0.9rem;
   }
 `

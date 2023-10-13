@@ -12,7 +12,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 1rem 1rem;
 
   h1 {
@@ -29,22 +29,24 @@ export const HeaderContainer = styled.div`
 
 export const TimeLineContainer = styled.div`
 
-  padding: 1rem 1rem;
+  padding: 3rem 1rem;
 
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+  grid-template-columns: repeat(11, 1fr);
   grid-template-rows: repeat(8, 1fr);
 
   .back {
-    grid-column-start: 7;
-    grid-column-end: 8;
+    grid-column-start: 10;
+    grid-column-end: 11;
     grid-row-start: 9;
     grid-row-end: 9;
   }
 
   .foward {
-    grid-column-start: 8;
-    grid-column-end: 9;
+    grid-column-start: 11;
+    grid-column-end: 12;
     grid-row-start: 9;
     grid-row-end: 9;
   }

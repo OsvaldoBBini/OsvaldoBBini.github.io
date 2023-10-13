@@ -1,4 +1,3 @@
-// import NavegateButton from "../../components/NavegateButton"
 import NavegateButton from "../../components/NavegateButton"
 import PopupContent from "../../components/PopupContent"
 import { Container, HeaderContainer, TimeLineContainer } from "./styles"
@@ -7,9 +6,11 @@ const texts = [
   {
     title: "1990",
     contentTitle: "Cascata em queda",
-    content: `Na década de 90 desenvolvedores começaram
-              a notar que os ciclos de produção do método cascata
-              não estavam suprindo as necessidades e expectativas dos cliente`,
+    content: `Na década de 90 os desenvolvedores começaram
+              a notar que os ciclos de produção do método cascata (waterfall)
+              não estavam suprindo as necessidades e expectativas dos cliente
+              pela dificuldade de registrar feedbacks e alterações durant o ciclo
+              de vida do projeto`,
     gridDirections: {
       columnStart: 1,
       columnEnd: 1,
@@ -21,12 +22,14 @@ const texts = [
     title: "1995",
     contentTitle: "Scrum",
     content: `Em 1995 o Scrum, foi criado por Ken Schwaber e Jeff Sutherland se estabelecendo
-              como um dos primeiros métodos ágeis a serem criados e utilizados`,
+              como um dos primeiros métodos ágeis a serem criados e utilizados, o scrum se
+              estabeleceu como um framework distinto ao metodo cascata considerando rodadas de revisão
+              com os clientes e com os próprios desenvoldores para estabelecer melhorias aos sistemas`,
     gridDirections: {
-      columnStart: 2,
-      columnEnd: 2,
-      rowStart: 5,
-      rowEnd: 5,
+      columnStart: 3,
+      columnEnd: 3,
+      rowStart: 6,
+      rowEnd: 6,
     }
   },
   {
@@ -34,36 +37,29 @@ const texts = [
     contentTitle: "O Manifesto Ágil",
     content: `Em uma reunião realizada em Snowbird, Utah nos Estados Unidos,
               17 desenvolvedores de software criaram um documento definindo
-              12 princípios para o desenvolvimento ágil estabelecendo bases
-              para uma adoção mais generalizada`,
+              12 princípios para o desenvolvimento ágil, este manifesto permea
+              todos os métodos e construções ágeis, trazendo para os desenvolvedores
+              as diretrizes e os pontos mais importantes ao desenvolverem novos produtos
+              visando a entrega de valor real aos seus clientes`,
     gridDirections: {
-      columnStart: 4,
-      columnEnd: 4,
-      rowStart: 3,
-      rowEnd: 3,
+      columnStart: 5,
+      columnEnd: 5,
+      rowStart: 1,
+      rowEnd: 1,
     }
   },
   {
     title: "2009",
     contentTitle: "Kanban",
     content: `O framework Kanban é introduzido como uma abordagem
-              ágil para gerenciamento de fluxo de trabalho`,
-    gridDirections: {
-      columnStart: 5,
-      columnEnd: 5,
-      rowStart: 6,
-      rowEnd: 6,
-    }
-  },
-  {
-    title: "2010",
-    contentTitle: "Scaled Agile Framework (SAFe)",
-    content: `O framework é lançado como uma estrutura para implementar práticas ágeis em grande escala`,
+              ágil para gerenciamento de fluxo de trabalho. 
+              Trata-se de um sistema visual que busca gerenciar o trabalho conforme ele se move pelo processo
+              tendo uso em diversos setores, projetos e outras metodologias`,
     gridDirections: {
       columnStart: 6,
       columnEnd: 6,
-      rowStart: 2,
-      rowEnd: 2,
+      rowStart: 7,
+      rowEnd: 7,
     }
   },
   {
@@ -72,10 +68,10 @@ const texts = [
     content: `O uso de práticas ágeis vem se espalhando para além do desenvolvimento de software
               ,sendo adotado em áreas como marketing, recursos humanos e gerenciamento de projetos`,
     gridDirections: {
-      columnStart: 7,
-      columnEnd: 7,
-      rowStart: 5,
-      rowEnd: 5,
+      columnStart: 8,
+      columnEnd: 8,
+      rowStart: 4,
+      rowEnd: 4,
     }
   },
 ]
@@ -84,8 +80,11 @@ export default function TimeLine(): JSX.Element {
   return (
     <Container>
       <HeaderContainer>
-        <h1>Linha do tempo das metodologias ágeis:</h1>
-        <p>As metodologias ágeis surgiram como solução para tratar dos problemas gerados pelas mudanças rápidas e repentinas que os projetos enfrentam, então, a fim de serem eficiente e cumprirem seus propósitos elas passaram po diversas mudanças desde sua origem</p>
+        <h1>Marcos das metodologias ágeis:</h1>
+        <p>As metodologias ágeis surgiram como solução para tratar dos problemas gerados
+          pelas mudanças rápidas e repentinas que os projetos enfrentvam,
+          assim iniciou-se a busca por métodos alternativos a métodos como waterfall,
+          estes métodos ágeis são recentes, assim alguns desses marcos apresentam-se a seguir</p>
       </HeaderContainer>
       <TimeLineContainer>
         {texts.map((text) => 
