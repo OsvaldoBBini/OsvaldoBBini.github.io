@@ -1,5 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import waves from '../../assets/images/waves.svg'
+
+const leftToRight = keyframes`
+to {
+  transform: translateX(0)
+}
+`
 
 export const Container = styled.div`
   width: 100%;
@@ -20,6 +26,8 @@ export const Container = styled.div`
     font-size: 1.5rem;
     text-shadow: 5px 5px rgba(0,0,0,0.75);
     margin-bottom: 1rem;
+    transform: translateX(-30rem);
+    animation: ${leftToRight} 0.6s linear forwards;
 
     grid-column-start: 2;
     grid-column-end: 6;
@@ -29,6 +37,8 @@ export const Container = styled.div`
 
   .title-text {
     text-shadow: 5px 5px rgba(0,0,0,0.75);
+    transform: translateX(-30rem);
+    animation: ${leftToRight} 0.8s linear forwards;
 
     grid-column-start: 2;
     grid-column-end: 6;
@@ -50,12 +60,3 @@ export const Container = styled.div`
     grid-row-end: 9;
   }
 `;
-
-export const TextsContainer = styled.div`
-  display: flex;
-
-  grid-column-start: 4;
-  grid-column-end: 4;
-  grid-row-start: 5;
-  grid-row-end: 8;
-`

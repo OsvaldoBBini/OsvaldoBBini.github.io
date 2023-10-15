@@ -1,11 +1,10 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 interface IContainer {
+  time: string;
   griddirections: {
     columnStart: number,
     columnEnd: number,
-    rowStart: number,
-    rowEnd: number,
   }
 }
 
@@ -13,19 +12,28 @@ interface ITextContent {
   opacity: number;
 }
 
+const leftToRight = keyframes`
+  to {
+    transform: translateX(0)
+  }
+`
+
 export const Container = styled.div<IContainer>`
   display: flex;
   align-items: flex-start;
   column-gap: 0.6rem;
   position: relative;
+  transform: translateX(-40rem);
+  animation: ${leftToRight} ${({time}) => time} linear forwards;
 
   grid-column-start: ${({griddirections}) => griddirections.columnStart};
   grid-column-end: ${({griddirections}) => griddirections.columnEnd};
-  grid-row-start: ${({griddirections}) => griddirections.rowStart};
-  grid-row-end: ${({griddirections}) => griddirections.rowEnd};
+  grid-row-start: 5;
+  grid-row-end: 6;
 `
 
 export const TextTitle = styled.div`
+
   background: #ffff;
   color: ${({ theme }) => theme.colors.primary.dark};
   font-weight: 700;

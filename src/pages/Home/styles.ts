@@ -1,5 +1,17 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import waves from '../../assets/images/waves.svg'
+
+const leftToRight = keyframes`
+to {
+  transform: translateX(0)
+}
+`
+
+const rightToRight = keyframes`
+to {
+  transform: translateX(0)
+}
+`
 
 export const Container = styled.div`
   width: 100%;
@@ -13,6 +25,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 `;
 
 export const ComponentsContainer = styled.div`
@@ -30,6 +43,8 @@ export const HomeTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
+  transform: translateX(-40rem);
+  animation: ${leftToRight} 0.6s linear forwards;
 
   h1 {
     font-size: 5rem;
@@ -43,6 +58,9 @@ export const HomeTitleContainer = styled.div`
 `
 
 export const ImageContainer = styled.div`
+
+  transform: translateX(40rem);
+  animation: ${rightToRight} 0.6s linear forwards;
 
   img {
     width: 30rem;

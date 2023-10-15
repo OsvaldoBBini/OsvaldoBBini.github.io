@@ -5,21 +5,25 @@ interface IPopupContent {
   title: string,
   contentTitle: string,
   content: string,
+  time: string,
   gridDirections: {
     columnStart: number,
     columnEnd: number,
-    rowStart: number,
-    rowEnd: number,
   }
 }
 
-export default function PopupContent({title, contentTitle, content, gridDirections}: IPopupContent): JSX.Element {
+export default function PopupContent(
+    {title, 
+    contentTitle, 
+    content,
+    time, 
+    gridDirections}: IPopupContent): JSX.Element {
   
   const [opacity, setOpacity] = useState<number>(0);
 
   return (
-    <Container griddirections={gridDirections}>
-      <TextTitle 
+    <Container griddirections={gridDirections} time={time}>
+      <TextTitle
         onMouseEnter={() => setOpacity(1)}
         onMouseLeave={() => setOpacity(0)}>
         <h1>{title}</h1>

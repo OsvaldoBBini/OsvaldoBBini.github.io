@@ -1,6 +1,15 @@
+import { useEffect, useState } from "react"
 import NavegateButton from "../../components/NavegateButton"
 import PopupContent from "../../components/PopupContent"
 import { Container } from "./styles"
+
+interface ITexts{
+  title: string,
+  contentTitle: string,
+  content: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any
+} 
 
 const texts = [
   {
@@ -9,14 +18,8 @@ const texts = [
     content: `Na década de 90 os desenvolvedores começaram
               a notar que os ciclos de produção do método cascata (waterfall)
               não estavam suprindo as necessidades e expectativas dos cliente
-              pela dificuldade de registrar feedbacks e alterações durant o ciclo
+              pela dificuldade de registrar feedbacks e alterações durante o ciclo
               de vida do projeto`,
-    gridDirections: {
-      columnStart: 5,
-      columnEnd: 6,
-      rowStart: 5,
-      rowEnd: 6,
-    }
   },
   {
     title: "1995",
@@ -24,13 +27,7 @@ const texts = [
     content: `Em 1995 o Scrum, foi criado por Ken Schwaber e Jeff Sutherland se estabelecendo
               como um dos primeiros métodos ágeis a serem criados e utilizados, o scrum se
               estabeleceu como um framework distinto ao metodo cascata considerando rodadas de revisão
-              com os clientes e com os próprios desenvoldores para estabelecer melhorias aos sistemas`,
-    gridDirections: {
-      columnStart: 6,
-      columnEnd: 7,
-      rowStart: 5,
-      rowEnd: 6,
-    }
+              com os clientes e com os próprios desenvolvedores para estabelecer melhorias aos sistemas`,
   },
   {
     title: "2001",
@@ -41,12 +38,6 @@ const texts = [
               todos os métodos e construções ágeis, trazendo para os desenvolvedores
               as diretrizes e os pontos mais importantes ao desenvolverem novos produtos
               visando a entrega de valor real aos seus clientes`,
-    gridDirections: {
-      columnStart: 7,
-      columnEnd: 8,
-      rowStart: 5,
-      rowEnd: 6,
-    }
   },
   {
     title: "2009",
@@ -55,37 +46,43 @@ const texts = [
               ágil para gerenciamento de fluxo de trabalho. 
               Trata-se de um sistema visual que busca gerenciar o trabalho conforme ele se move pelo processo
               tendo uso em diversos setores, projetos e outras metodologias`,
-    gridDirections: {
-      columnStart: 8,
-      columnEnd: 9,
-      rowStart: 5,
-      rowEnd: 6,
-    }
   },
   {
     title: "2021",
     contentTitle: "Expansão Ágil",
     content: `O uso de práticas ágeis vem se espalhando para além do desenvolvimento de software
               ,sendo adotado em áreas como marketing, recursos humanos e gerenciamento de projetos`,
-    gridDirections: {
-      columnStart: 9,
-      columnEnd: 10,
-      rowStart: 5,
-      rowEnd: 6,
-    }
   },
 ]
 
 export default function TimeLine(): JSX.Element {
+
+
+  const [renderTexts, setRenderTexts] = useState<ITexts[]>([])
+
+  useEffect(() => {
+    const animatedTexts = texts.map((text: ITexts, index) => {
+      text.gridDirections = {
+        columStart: index + 5,
+        columnEnd: index + 6
+      }
+      text.time = `${texts.length/(index + 6)}s` 
+      return text
+    })
+    setRenderTexts(animatedTexts)
+  },[])
+
+
   return (
     <Container>
         <h1 className="title">Marcos das metodologias ágeis:</h1>
-        <p className="title-text">As metodologias ágeis surgiram como solução para tratar dos problemas gerados
-          pelas mudanças rápidas e repentinas que os projetos enfrentvam,
+        <p className="title-text">As metodologias ágeis surgiram como solução para tratar problemas gerados
+          pelas mudanças rápidas e repentinas que os projetos enfrentavam,
           assim iniciou-se a busca por métodos alternativos a métodos como waterfall,
           estes métodos ágeis são recentes, assim alguns desses marcos apresentam-se a seguir</p>
-        {texts.map((text) => 
+        {renderTexts.map((text) => 
           <PopupContent 
+            time={text.time}
             title={text.title} 
             contentTitle={text.contentTitle}
             content={text.content}
