@@ -1,5 +1,6 @@
 import ReorderList from "../../components/ReorderList"
-import { Container, Button, ButtonContainer, ListContainer, TextContainer, GridIcons, MenuContainer } from "./styles"
+import { Container, ButtonContainer, ListContainer, TextContainer, GridIcons, MenuContainer } from "./styles"
+import { Button } from "../../components/Button";
 import {useState} from 'react'
 import { IListItem } from "../../types/types";
 import NavegateButton from "../../components/NavegateButton";
@@ -57,7 +58,7 @@ export default function ReorderGame(): JSX.Element {
               <ReorderList selectedItens={selectedItens} onRemoveItens={handleRemoveItens}/>
           </ListContainer>
 
-          <NavegateButton text="Terminou!? Avançar..." destiny="/"/> 
+          <NavegateButton text="Terminou!? Avançar..." destiny="/agilevsvelocity"/> 
 
         </MenuContainer>
         

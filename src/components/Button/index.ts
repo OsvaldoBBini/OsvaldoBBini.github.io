@@ -1,18 +1,18 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Button = styled.button`
 
-  border-radius: 10px;
   text-decoration: none;
   background: #ffff;
   cursor: pointer;
-  padding: 0.8rem 0.8rem;
   text-align: center;
   color: ${({ theme }) => theme.colors.primary.dark};
   border-radius: 10px;
   box-shadow: 10px 10px rgba(0,0,0,0.75);
   transition: all 0.2s;
   border: none;
+  padding: 3px;
+  font-size: 2rem;
   font-weight: 700;
 
   &:hover {
@@ -25,4 +25,5 @@ export const Button = styled.button`
     transform: translate(0px, 0px);
     box-shadow: 10px 10px rgba(0,0,0,0.75);
   }
+
 `
