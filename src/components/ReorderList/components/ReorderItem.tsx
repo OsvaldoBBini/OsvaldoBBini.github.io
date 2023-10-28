@@ -14,7 +14,7 @@ export default function ReorderItem({ item, onRemoveItens }: Props): JSX.Element
   return (
     <Reorder.Item value={item} id={item.name} drag style={{ boxShadow, y }}>
       <span>{item.icon} {item.name}</span>
-      <button onClick={() => onRemoveItens(item.id)}>remover</button>
+      <button onClick={() => onRemoveItens(item.id)}>remover produto</button>
     </Reorder.Item>
   );
 }
