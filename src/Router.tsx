@@ -1,6 +1,6 @@
 import { PageContext } from "./contexts/PageContext"
 import Home from "./pages/Home"
-import TimeLine from "./pages/TimeLine"
+import ReorderGame from "./pages/ReorderGame"
 import {useContext} from 'react'
 
 export default function Router() {
@@ -10,7 +10,7 @@ export default function Router() {
   return (
     <>
       {page === '/' && (<Home/>)}
-      {page === '/timeline' && (<TimeLine/>)}
+      {page === '/reorderGame' && (<ReorderGame/>)}
     </>
   )
 }

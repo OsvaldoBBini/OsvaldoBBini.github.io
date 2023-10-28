@@ -1,5 +1,4 @@
 import styled, {keyframes} from 'styled-components';
-import waves from '../../assets/images/waves.svg'
 
 const leftToRight = keyframes`
 to {
@@ -16,11 +15,6 @@ to {
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  
-  background-image: url(${waves});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 
   display: flex;
   align-items: center;

@@ -11,7 +11,7 @@ export default function Home(): JSX.Element {
         <HomeTitleContainer>
           <h1>AgileFahor</h1>
           <p>Sua jornada no mundo ágil começa aqui!!!</p>
-          <NavegateButton text={'Inicar Jornada...'} destiny='/timeline'/>
+          <NavegateButton text={'Inicar Jornada...'} destiny='/reorderGame'/>
         </HomeTitleContainer>
         <ImageContainer>
           <img src={fahor} alt='logo fahor'/>
