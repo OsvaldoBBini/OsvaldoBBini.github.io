@@ -13,27 +13,26 @@ interface IButtonContainer {
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
   padding: 2rem;
-  display: flex;
-  justify-content: center;
   column-gap: 1rem;
 `
 
 export const MenuContainer = styled.div`
 
   display: flex;
-  flex-direction: column;
-  width: 50%;
   row-gap: 1rem;
+
+  margin-bottom: 1rem;
+
+  justify-content: space-around;
+  align-items: flex-start;
+
+  column-gap: 1rem;
 
 `
 
-export const TextContainer = styled.div` 
+export const InstructionsContainer = styled.div` 
   display: flex;
-  flex-direction: column;
-
-  row-gap: 1rem;
   padding: 1rem;
 
   background: #f5f5dc;
@@ -48,17 +47,26 @@ export const TextContainer = styled.div`
 
 `
 
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+`
+
 export const ListContainer = styled.div`
 
   background: #f5f5dc;
   color: #000000;
   box-shadow: 10px 10px rgba(0,0,0,0.75);
-
+  width: 100%;
   padding: 1rem;
 
   ul {
     border: 2px dashed #000000;
     padding: 1rem;
+    margin-bottom: 1rem;
+    max-height: 30rem;
+    overflow-y: scroll;
   }
 
   li {

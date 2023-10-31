@@ -1,5 +1,5 @@
 import ReorderList from "../../components/ReorderList"
-import { Container, ButtonContainer, ListContainer, TextContainer, GridIcons, MenuContainer } from "./styles"
+import { Container, ButtonContainer, ListContainer, InstructionsContainer, GridIcons, MenuContainer, TextContainer } from "./styles"
 import { Button } from "../../components/Button";
 import {useState} from 'react'
 import { IListItem } from "../../types/types";
@@ -25,6 +25,8 @@ export default function ReorderGame(): JSX.Element {
   const [selectedItens, setSelectedItens] = useState<IListItem[]>([])
 
   const handleWithItensSelection = (item: IListItem) => {
+    const alreadyHasItem = selectedItens.includes(item);
+    alreadyHasItem && handleRemoveItens(item.id)
     setSelectedItens((prevIten) => [...prevIten, item])
   }
 
@@ -36,42 +38,42 @@ export default function ReorderGame(): JSX.Element {
     <Container>
 
         <MenuContainer>
-
-          <TextContainer>
-            <h2>Para entendermos um pouco melhor por que as metodologias ágeis surgiram vamos jogar um jogo!?</h2>
-            <h3>Precisamos ajudar um cliente a escolher produtos para abrir um restaurante e aqui estão os pedidos do cliente:</h3>
-            <ul>
-              <li>O restaurante deve constar em seu cardápio a venda de fast food</li>
-              <li>O restaurante não deve vender sobremesas ou doces</li>
-              <li>O restaurante só funcionará a noite</li>
-              <li>A lista de produtos deve estar ordenada do mais caro a mais barato na opinião do profissional (você)</li>
-            </ul>
-            <h2>Vamos começar!?</h2>
-            <span>Obs:</span>
-            <ul>
-              <li>Para selecionar os alimentos basta clicar nos itens a direita</li>
-              <li>Para ordenar a lista basta arrastar os itens</li>
-            </ul>
-          </TextContainer>
+          <InstructionsContainer>
+            <TextContainer>
+              <h2>Na nossa primeira prada, para entendermos um pouco melhor do por quê as metodologias ágeis surgiram, vamos jogar um jogo!?</h2>
+              <h3>Precisamos ajudar um cliente a escolher produtos para abrir um restaurante e aqui estão os pedidos do cliente:</h3>
+              <ul>
+                <li>O restaurante deve constar em seu cardápio a venda de fast food</li>
+                <li>O restaurante não deve vender sobremesas ou doces</li>
+                <li>O restaurante só funcionará a noite</li>
+                <li>A lista de produtos deve estar ordenada do mais caro a mais barato na opinião do profissional (você)</li>
+              </ul>
+              <h2>Vamos começar!?</h2>
+              <span>Obs:</span>
+              <ul>
+                <li>Para selecionar os alimentos basta clicar nos alimentos abaixo</li>
+                <li>Para ordenar a lista basta arrastar os itens</li>
+              </ul>
+              <NavegateButton text="Terminou!? Avançar..." destiny="/agilevsvelocity"/> 
+            </TextContainer>
+          </InstructionsContainer>
 
           <ListContainer>
               <ReorderList selectedItens={selectedItens} onRemoveItens={handleRemoveItens}/>
           </ListContainer>
-
-          <NavegateButton text="Terminou!? Avançar..." destiny="/agilevsvelocity"/> 
-
-        </MenuContainer>
         
+        </MenuContainer>
+
         <GridIcons>
-          {allItems.map((item) => 
-          <ButtonContainer
-            key={item.id}
-            rowStart={item.rowStart}
-            columnStart={item.columnStart}>
-            <Button onClick={() => handleWithItensSelection(item)}>
-                {item.icon}
-            </Button>
-          </ButtonContainer>)}
+            {allItems.map((item) => 
+            <ButtonContainer
+              key={item.id}
+              rowStart={item.rowStart}
+              columnStart={item.columnStart}>
+              <Button onClick={() => handleWithItensSelection(item)}>
+                  {item.icon}
+              </Button>
+            </ButtonContainer>)}
         </GridIcons>
 
     </Container>

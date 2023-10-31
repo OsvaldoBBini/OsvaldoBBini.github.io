@@ -12,7 +12,7 @@ export default function ReorderItem({ item, onRemoveItens }: Props): JSX.Element
   const boxShadow = useRaisedShadow(y);
 
   return (
-    <Reorder.Item value={item} id={item.name} drag style={{ boxShadow, y }}>
+    <Reorder.Item value={item} id={item.name} style={{ boxShadow, y }}>
       <span>{item.icon} {item.name}</span>
       <button onClick={() => onRemoveItens(item.id)}>remover produto</button>
     </Reorder.Item>

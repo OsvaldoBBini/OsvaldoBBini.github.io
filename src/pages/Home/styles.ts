@@ -1,18 +1,7 @@
-import styled, {keyframes} from 'styled-components';
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
 
-const leftToRight = keyframes`
-to {
-  transform: translateX(0)
-}
-`
-
-const rightToRight = keyframes`
-to {
-  transform: translateX(0)
-}
-`
-
-export const Container = styled.div`
+export const Container = styled.section`
   width: 100%;
   height: 100%;
 
@@ -31,14 +20,12 @@ export const ComponentsContainer = styled.div`
 
 `
 
-export const HomeTitleContainer = styled.div`
+export const HomeTitleContainer = styled(motion.div)`
   z-index: 10;
   width: 30%;
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
-  transform: translateX(-40rem);
-  animation: ${leftToRight} 0.6s linear forwards;
 
   h1 {
     font-size: 5rem;
@@ -51,14 +38,7 @@ export const HomeTitleContainer = styled.div`
   }
 `
 
-export const ImageContainer = styled.div`
-
-  transform: translateX(40rem);
-  animation: ${rightToRight} 0.6s linear forwards;
-
-  img {
+export const ImageContainer = styled(motion.img)`
     width: 30rem;
     filter: drop-shadow(10px 10px rgba(0,0,0,0.75));
-  }
-
 `
