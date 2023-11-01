@@ -40,7 +40,7 @@ export default function ReorderGame(): JSX.Element {
         <MenuContainer>
           <InstructionsContainer>
             <TextContainer>
-              <h2>Na nossa primeira prada, para entendermos um pouco melhor do por quê as metodologias ágeis surgiram, vamos jogar um jogo!?</h2>
+              <h2>Na nossa primeira parada, para entendermos um pouco melhor do por quê as metodologias ágeis surgiram, vamos jogar um jogo!?</h2>
               <h3>Precisamos ajudar um cliente a escolher produtos para abrir um restaurante e aqui estão os pedidos do cliente:</h3>
               <ul>
                 <li>O restaurante deve constar em seu cardápio a venda de fast food</li>
@@ -51,7 +51,7 @@ export default function ReorderGame(): JSX.Element {
               <h2>Vamos começar!?</h2>
               <span>Obs:</span>
               <ul>
-                <li>Para selecionar os alimentos basta clicar nos alimentos abaixo</li>
+                <li>Para selecionar os alimentos basta clicar nos alimentos a direita</li>
                 <li>Para ordenar a lista basta arrastar os itens</li>
               </ul>
               <NavegateButton text="Terminou!? Avançar..." destiny="/agilevsvelocity"/> 
@@ -67,9 +67,9 @@ export default function ReorderGame(): JSX.Element {
         <GridIcons>
             {allItems.map((item) => 
             <ButtonContainer
-              key={item.id}
-              rowStart={item.rowStart}
-              columnStart={item.columnStart}>
+            key={item.id}
+            rowStart={item.rowStart}
+            columnStart={item.columnStart}>
               <Button onClick={() => handleWithItensSelection(item)}>
                   {item.icon}
               </Button>

@@ -5,7 +5,7 @@ interface IOutlineContainer {
   children: ReactNode
 }
 
-export default function OtlineContainer ({children}: IOutlineContainer) {
+export default function OutlineContainer ({children}: IOutlineContainer) {
   return (
     <Container>
       {children}
