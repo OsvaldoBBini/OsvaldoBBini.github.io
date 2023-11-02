@@ -70,7 +70,6 @@ export const TextContainer = styled.div`
 `
 
 export const ListContainer = styled.div`
-
   background: #f5f5dc;
   color: #000000;
   box-shadow: 10px 10px rgba(0,0,0,0.75);
@@ -78,6 +77,12 @@ export const ListContainer = styled.div`
   padding: 1rem;
   max-height: 80%;
   overflow-y: scroll;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
 
   ul {
     max-height: 80%;

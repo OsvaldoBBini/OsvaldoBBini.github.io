@@ -59,6 +59,7 @@ export default function ReorderGame(): JSX.Element {
           </InstructionsContainer>
 
           <ListContainer>
+              <h2>Cardápio</h2>
               <ReorderList selectedItens={selectedItens} onRemoveItens={handleRemoveItens}/>
           </ListContainer>
         
