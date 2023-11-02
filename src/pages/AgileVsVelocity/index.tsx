@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from 'react'
-import { Ball, Container, ContainerInOut, AnimationContainer, Target, Wall } from "./styles";
+import { Ball, Container, AnimationContainer, Target, Wall } from "./styles";
+import { ContainerInOut } from "../../components/ContainerInOut";
 import OutlineContainer from "../../components/OutlineContainer";
 import NavegateButton from "../../components/NavegateButton";
 
@@ -101,22 +102,21 @@ export default function AgileVsVelocity(): JSX.Element {
 
             <div>  
               <Ball
-              style={{height: '3rem', width: '3rem'}}
-
-              animate={{
-                x: [50, 400, 400, 50],
-                y: [150, 150, 150, 150],
-              }}
-
-              transition={{
-                duration: 1,
-                ease: "easeInOut",
-                repeat: Infinity,
-              }}
-
+                as={motion.div}
+                style={{height: '3rem', width: '3rem'}}
+                animate={{
+                  x: [50, 400, 400, 50],
+                  y: [150, 150, 150, 150],
+                }}
+                transition={{
+                  duration: 1,
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                }}
               />
 
               <Wall
+                as={motion.div}
                 style={{height: '8rem', width: '2rem'}}
                 animate={{
                   x: [430, 430],
@@ -125,7 +125,8 @@ export default function AgileVsVelocity(): JSX.Element {
 
               />
               
-              <Target 
+              <Target
+                as={motion.div} 
                 style={{height: '4rem', width: '4rem'}}
                 animate={{
                   x: [480, 480],
@@ -146,6 +147,7 @@ export default function AgileVsVelocity(): JSX.Element {
             <h2>Já quando falamos de agilidade estamos nos referindo a capacidade de se adaptar a mudanças do ambiente impostas por situações que podemos e não podemos controlar, modificando nosso caminho para atingir o objetivo, isso nem sempre é rápido porém se torna mais assertivo</h2>
             <div>
               <Ball 
+              as={motion.div}
               style={{
                 width: '3rem',
                 height: '3rem',
@@ -165,6 +167,7 @@ export default function AgileVsVelocity(): JSX.Element {
               </Ball>
 
               <Wall
+                as={motion.div}
                 style={{height: '8rem', width: '2rem'}}
                 animate={{
                   x: [250, 250],
@@ -173,6 +176,7 @@ export default function AgileVsVelocity(): JSX.Element {
               />
 
               <Target 
+                as={motion.div}
                 style={{height: '4rem', width: '4rem'}}
                 animate={{
                   x: [395, 395],
@@ -193,7 +197,7 @@ export default function AgileVsVelocity(): JSX.Element {
           <h2>Então para orientar desenvolvedores do mundo todo, 17 pessoas da área de desenvolvimento de software se uniram e criaram os mandamentos do mundo ágil a fim de buscar esta agilidade para novos projetos</h2>
         </OutlineContainer>
 
-        <NavegateButton text="Bora conferir!? ..." destiny="/"/>
+        <NavegateButton text="Bora conferir!? ..." destiny="/agilemanifest"/>
       
       </ContainerInOut>
 

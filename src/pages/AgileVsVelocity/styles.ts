@@ -6,23 +6,12 @@ export const Container = styled.div`
   height: 1000vh;
 `
 
-export const ContainerInOut = styled(motion.div)`
-  width: 80%;
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  display: flex;
-  flex-direction: column;
-  row-gap: 2rem;
-
-`
-
 export const Ball = styled(motion.div)`
   background: ${({theme}) => theme.colors.background};
   border-radius: 50px;
   z-index: 1000;
+  width: 3rem;
+  height: 3rem;
 `
 
 export const Wall = styled(motion.div)`

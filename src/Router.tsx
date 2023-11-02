@@ -1,4 +1,5 @@
 import { PageContext } from "./contexts/PageContext"
+import AgileManifest from "./pages/AgileManifest"
 import AgileVsVelocity from "./pages/AgileVsVelocity"
 import Home from "./pages/Home"
 import ReorderGame from "./pages/ReorderGame"
@@ -13,6 +14,7 @@ export default function Router() {
       {page === '/' && (<Home/>)}
       {page === '/reorderGame' && (<ReorderGame/>)}
       {page === '/agilevsvelocity' && (<AgileVsVelocity/>)}
+      {page === '/agilemanifest' && (<AgileManifest/>)}
     </>
   )
 }
