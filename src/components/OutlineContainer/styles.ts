@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  max-width: 80%;
   text-decoration: none;
   background: #ffff;
   text-align: center;
@@ -11,4 +12,5 @@ export const Container = styled.div`
   border: none;
   padding: 1rem;
   font-weight: 700;
+  z-index: 1000;
 `

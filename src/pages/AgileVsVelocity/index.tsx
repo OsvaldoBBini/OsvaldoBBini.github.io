@@ -42,13 +42,13 @@ export default function AgileVsVelocity(): JSX.Element {
 
     <Container ref={targetRef}>
 
-      <ContainerInOut as={motion.div} style={{opacity: opacity[0], scale: scale[0], x: '-50%'}}>
+      <ContainerInOut as={motion.div} style={{opacity: opacity[0], scale: scale[0]}}>
         <OutlineContainer>
           <h2>Meus Parabéns!!! Você conseguiu ajudar o seu cliente a montar um cardápio para seu novo restaurante!!</h2>
         </OutlineContainer>
       </ContainerInOut>
      
-      <ContainerInOut as={motion.div} style={{opacity: opacity[1], scale: scale[1], x: '-50%'}}>
+      <ContainerInOut as={motion.div} style={{opacity: opacity[1], scale: scale[1]}}>
         <OutlineContainer>
           <h2>
             Porém algo aconteceu no meio do caminho e eu tenho uma péssima notícia para te dizer, o cliente desistiu do seu cardápio pois ele mudou de ideia e quer servir doces e lanches para servir no café da manhã,
@@ -57,7 +57,7 @@ export default function AgileVsVelocity(): JSX.Element {
         </OutlineContainer>
       </ContainerInOut>
       
-      <ContainerInOut as={motion.div} style={{opacity: opacity[2], scale: scale[2], x: '-50%'}}>
+      <ContainerInOut as={motion.div} style={{opacity: opacity[2], scale: scale[2]}}>
         <OutlineContainer>
           <h2>
             Esse exemplo pode parecer bobo, porém e se aumentarmos a escala dele?? 
@@ -68,7 +68,7 @@ export default function AgileVsVelocity(): JSX.Element {
         </OutlineContainer>
       </ContainerInOut>
       
-      <ContainerInOut as={motion.div} style={{opacity: opacity[3], scale: scale[3], x: '-50%'}}>
+      <ContainerInOut as={motion.div} style={{opacity: opacity[3], scale: scale[3]}}>
         <OutlineContainer>
           <h2>
             Apenas uma palavra poderia resumir este projeto caso ele desse errado: PÂNICO
@@ -76,7 +76,7 @@ export default function AgileVsVelocity(): JSX.Element {
         </OutlineContainer>
       </ContainerInOut>
 
-      <ContainerInOut as={motion.div} style={{opacity: opacity[4], scale: scale[4], x: '-50%'}}>
+      <ContainerInOut as={motion.div} style={{opacity: opacity[4], scale: scale[4]}}>
         <OutlineContainer>
           <h2>
             Com esse intuito as metodologias ágeis surgiram, graças ao mercado volátil percebeu-se que permancer longe
@@ -87,7 +87,7 @@ export default function AgileVsVelocity(): JSX.Element {
         </OutlineContainer>
       </ContainerInOut>
 
-      <ContainerInOut as={motion.div} style={{opacity: opacity[5], scale: scale[5], x: '-50%'}}>
+      <ContainerInOut as={motion.div} style={{opacity: opacity[5], scale: scale[5]}}>
         <OutlineContainer>
           <h2>
             Mas não se engane pois existe diferença entre ser rápido e utilizar de métodos ágeis
@@ -95,7 +95,7 @@ export default function AgileVsVelocity(): JSX.Element {
         </OutlineContainer>
       </ContainerInOut>
 
-      <ContainerInOut style={{opacity: opacity[6], scale: scale[6], x: '-50%'}}>
+      <ContainerInOut style={{opacity: opacity[6], scale: scale[6]}}>
         <OutlineContainer>
           <AnimationContainer>
             <h2>Quando falamos de velocidade estamos nos referindo a algo que seja extremamente veloz, mas se algo acontecer em seu caminho ele se torna incapaz de mudar sua trajetória</h2>
@@ -141,7 +141,7 @@ export default function AgileVsVelocity(): JSX.Element {
       </ContainerInOut>
 
 
-      <ContainerInOut style={{opacity: opacity[7], scale: scale[7], x: '-50%'}}>
+      <ContainerInOut style={{opacity: opacity[7], scale: scale[7]}}>
         <OutlineContainer>
           <AnimationContainer>
             <h2>Já quando falamos de agilidade estamos nos referindo a capacidade de se adaptar a mudanças do ambiente impostas por situações que podemos e não podemos controlar, modificando nosso caminho para atingir o objetivo, isso nem sempre é rápido porém se torna mais assertivo</h2>

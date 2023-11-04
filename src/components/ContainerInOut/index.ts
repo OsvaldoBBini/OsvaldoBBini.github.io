@@ -2,13 +2,19 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const ContainerInOut = styled(motion.div)`
-  width: 80%;
+  width: 100%;
+  height: 100%;
   position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  top: 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
+  z-index: 1;
 `
