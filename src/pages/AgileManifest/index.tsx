@@ -30,6 +30,10 @@ export default function AgileManifest(): JSX.Element {
 
   return (
     <Container ref={targetRef}>
+
+      <p className="instructions">
+        Para avançar arraste para baixo {'-->'}
+      </p>
       
       <ContainerInOut as={motion.div} style={{opacity: opacity[0]}}>
         <OutlineContainer>
@@ -142,7 +146,7 @@ export default function AgileManifest(): JSX.Element {
             O que você acha de darmos uma olhada juntos no que é esse SCRUM??
           </h2>
         </OutlineContainer>
-          <NavegateButton text="Bora lá !?..." destiny="/"/>
+          <NavegateButton text="Bora lá !?..." destiny="/scrum"/>
       </ContainerInOut>
       
       <motion.div

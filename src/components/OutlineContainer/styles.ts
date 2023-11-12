@@ -1,7 +1,14 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const Container = styled.div`
-  max-width: 80%;
+export const Container = styled(motion.div)`
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100%;
+
   text-decoration: none;
   background: #ffff;
   text-align: center;

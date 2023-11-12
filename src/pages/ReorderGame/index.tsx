@@ -27,11 +27,11 @@ export default function ReorderGame(): JSX.Element {
   const handleWithItensSelection = (item: IListItem) => {
     const alreadyHasItem = selectedItens.includes(item);
     alreadyHasItem && handleRemoveItens(item.id)
-    setSelectedItens((prevIten) => [...prevIten, item])
+    setSelectedItens((prevItem) => [...prevItem, item])
   }
 
   const handleRemoveItens = (itemId: number) => {
-    setSelectedItens(selectedItens.filter((itens) => itens.id !== itemId))
+    setSelectedItens(selectedItens.filter((items) => items.id !== itemId))
   }
 
   return (
@@ -72,7 +72,7 @@ export default function ReorderGame(): JSX.Element {
             rowStart={item.rowStart}
             columnStart={item.columnStart}>
               <Button onClick={() => handleWithItensSelection(item)}>
-                  {item.icon}
+                  {item.icon} 
               </Button>
             </ButtonContainer>)}
         </GridIcons>

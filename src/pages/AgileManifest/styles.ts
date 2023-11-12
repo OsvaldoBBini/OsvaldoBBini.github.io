@@ -32,9 +32,18 @@ export const Container = styled.section`
   height: 1000vh;
   width: 100%;
   background: #000;
+  position: relative;
 
   h1 {
     font-size: 3rem;
+  }
+
+  .instructions {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 10rem;
+    text-align: center;
   }
 
 `

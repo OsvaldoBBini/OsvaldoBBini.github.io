@@ -23,13 +23,10 @@ export const Container = styled.div`
 export const MenuContainer = styled.div`
 
   display: flex;
-
   margin-bottom: 1rem;
   height: 100%;
-
   justify-content: center;
   align-items: center;
-
   column-gap: 2rem;
 `
 

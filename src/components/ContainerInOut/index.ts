@@ -13,8 +13,9 @@ export const ContainerInOut = styled(motion.div)`
   justify-content: center;
   align-items: center;
 
-  display: flex;
   flex-direction: column;
   row-gap: 2rem;
   z-index: 1;
+
+  padding: 2rem;
 `

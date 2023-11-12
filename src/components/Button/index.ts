@@ -11,7 +11,7 @@ export const Button = styled.button`
   box-shadow: 10px 10px rgba(0,0,0,0.75);
   transition: all 0.2s;
   border: none;
-  padding: 3px;
+  padding: 0.5rem;
   font-size: 2rem;
   font-weight: 700;
 

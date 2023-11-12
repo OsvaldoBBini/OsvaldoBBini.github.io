@@ -4,6 +4,16 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 1000vh;
+  position: absolute;
+
+  .instructions {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 10rem;
+    text-align: center;
+  }
+
 `
 
 export const Ball = styled(motion.div)`
