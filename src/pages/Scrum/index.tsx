@@ -147,7 +147,7 @@ export default function Scrum(): JSX.Element {
             Porém dentro do universo ágil não existem apenas o SCRUM, existem diferentes frameworks e métodos que até mesmo o SCRUM faz uso e utiliza em seus eventos de planejamento, então pq não darmos uma olhadinha neles?
           </h2>
         </OutlineContainer>
-          <NavegateButton text="Conferir..." destiny="/"/>
+          <NavegateButton text="Conferir..." destiny="/others"/>
       </ContainerInOut>
 
     </Container>

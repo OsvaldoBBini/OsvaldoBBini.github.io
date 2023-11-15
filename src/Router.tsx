@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import ReorderGame from "./pages/ReorderGame"
 import {useContext} from 'react'
 import Scrum from "./pages/Scrum"
+import OtherMethods from "./pages/OtherMethods"
 
 export default function Router() {
 
@@ -17,6 +18,7 @@ export default function Router() {
       {page === '/agilevsvelocity' && (<AgileVsVelocity/>)}
       {page === '/agilemanifest' && (<AgileManifest/>)}
       {page === '/scrum' && (<Scrum/>)}
+      {page === '/others' && (<OtherMethods/>)}
     </>
   )
 }

@@ -19,5 +19,4 @@ export const Container = styled(motion.div)`
   border: none;
   padding: 1rem;
   font-weight: 700;
-  z-index: 1000;
 `
