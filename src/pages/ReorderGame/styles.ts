@@ -21,17 +21,16 @@ export const Container = styled.div`
 `
 
 export const MenuContainer = styled.div`
-
   display: flex;
   margin-bottom: 1rem;
   height: 100%;
-  justify-content: center;
-  align-items: center;
   column-gap: 2rem;
 `
 
 export const InstructionsContainer = styled.div` 
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 1rem;
 
   width: 55%;
@@ -51,7 +50,7 @@ export const InstructionsContainer = styled.div`
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 2rem;
 
   h2 {
     font-size: 1.2rem;
@@ -72,7 +71,6 @@ export const ListContainer = styled.div`
   box-shadow: 10px 10px rgba(0,0,0,0.75);
   width: 45%;
   padding: 1rem;
-  max-height: 80%;
   overflow-y: scroll;
 
   h2 {
@@ -113,8 +111,8 @@ export const GridIcons = styled.div`
   display: grid;
   column-gap: 1rem;
   row-gap: 1rem;
-  grid-template-columns: repeat(10, 1f);
-  grid-template-rows: repeat(10, 1f);
+  grid-template-columns: repeat(3, 1f);
+  grid-template-rows: repeat(4, 1f);
 `
 
 

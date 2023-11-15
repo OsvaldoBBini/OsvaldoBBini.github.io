@@ -5,7 +5,7 @@ export const Container = styled(motion.div)`
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   max-width: 100%;
 
@@ -19,4 +19,9 @@ export const Container = styled(motion.div)`
   border: none;
   padding: 1rem;
   font-weight: 700;
+
+  img {
+    width: 5rem;
+    height: 5rem;
+  }
 `

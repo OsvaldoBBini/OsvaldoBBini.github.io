@@ -43,7 +43,7 @@ export default function AgileVsVelocity(): JSX.Element {
       <ContainerInOut as={motion.div} style={{opacity: opacity[1]}}>
         <OutlineContainer>
           <h2>
-            Porém algo aconteceu no meio do caminho e eu tenho uma péssima notícia para te dizer, o cliente desistiu do seu cardápio pois ele mudou de ideia e quer servir doces e lanches para servir no café da manhã,
+            Porém algo aconteceu no meio do caminho e eu tenho uma péssima notícia para te dizer, o cliente desistiu do seu cardápio pois ele mudou de ideia e quer servir doces e lanches no café da manhã,
             e que pena, não tem nenhum desses alimentos na sua lista. O trabalho que você fez foi todo ralo abaixo
           </h2>
         </OutlineContainer>
@@ -53,9 +53,9 @@ export default function AgileVsVelocity(): JSX.Element {
         <OutlineContainer>
           <h2>
             Esse exemplo pode parecer bobo, porém e se aumentarmos a escala dele?? 
-            Agora imagine-se em um projeto maior, com várias pessoas trabalhando nele,
+            Agora imagine-se em um projeto maior, com várias pessoas trabalhando,
             com diversas funcionalidades, consumindo vários recursos da empresa e
-            que levaria dois anos, até mais para ser concluido
+            que levaria anos para ser concluido
           </h2>
         </OutlineContainer>
       </ContainerInOut>
@@ -82,7 +82,7 @@ export default function AgileVsVelocity(): JSX.Element {
       <ContainerInOut as={motion.div} style={{opacity: opacity[5]}}>
         <OutlineContainer>
           <h2>
-            Mas não se engane pois existe diferença entre ser rápido e utilizar de métodos ágeis
+            Mas não se engane pois existe diferença entre ser rápido e agil em entregas quando nos referimos a métodos ágeis
           </h2>
         </OutlineContainer>
       </ContainerInOut>

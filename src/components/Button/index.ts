@@ -12,8 +12,7 @@ export const Button = styled.button`
   transition: all 0.2s;
   border: none;
   padding: 0.5rem;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.4rem;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary.lighter};
