@@ -5,7 +5,6 @@ import { ContainerInOut } from "../../components/ContainerInOut";
 import OutlineContainer from "../../components/OutlineContainer";
 import NavegateButton from "../../components/NavegateButton";
 
-
 export default function OtherMethods(): JSX.Element {
 
   const targetRef = useRef(null)
@@ -55,7 +54,6 @@ export default function OtherMethods(): JSX.Element {
           <h2>
             Começaremos pelo Extreme Programming (XP), este método foi criado em 1996 e tem como objetivo entregas no momento em que o cliente precisa, focando em utilizar um sistema de equipe um pouco diferente, o sistema de PAIR PROGRAMMING ou programação em pares. Além disso assim como o SCRUM ele se basea valores,porém os valores do método são: simplicidade, feedback, comunicação, e coragem.
           </h2>
-        {/* "https://www.hostgator.com.br/blog/extreme-programming-entenda-a-metodologia-agil-de-software/ */}
         </OutlineContainer>
       </ContainerInOut>
      
@@ -82,7 +80,6 @@ export default function OtherMethods(): JSX.Element {
             Possuimos também frameworks maiores como O Scaled Agile Framework que foi desenvolvido em 2011 para ajudar as equipes de desenvolvimento de software a colocar produtos no mercado mais rapidamente.
             Com base em uma combinação de princípios ágeis e enxutos, ele apela para uma estreita colaboração e alinhamento entre as equipes e visa centralizar a tomada de decisões. Além disso, oferece várias opções de configuração dependendo do tamanho do time de desenvolvedores. permite que as organizações visualizem o “quadro geral”, mapeando funções, responsabilidades e atividades necessárias para o desenvolvimento de software. 
           </h2>
-          {/* https://www.mjvinnovation.com/pt-br/blog/scaled-agile-framework-safe/ */}
         </OutlineContainer>
       </ContainerInOut>
       

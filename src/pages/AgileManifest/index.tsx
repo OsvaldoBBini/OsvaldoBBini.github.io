@@ -118,7 +118,7 @@ export default function AgileManifest(): JSX.Element {
           <OutlineContainer>
             <img src={computer}/>
             <h2>
-              7. Softwares fuuncionando: Software funcionando é a medida primária de progresso.
+              7. Softwares funcionando: Software funcionando é a medida primária de progresso.
             </h2>
           </OutlineContainer>
           <OutlineContainer>

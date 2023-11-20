@@ -16,7 +16,6 @@ export default function NavegateButton({text, destiny, disabled}: IButton): JSX.
 
   return (
     <Button
-
       disabled={disabled}
       onClick={() => {
       setPage(destiny)

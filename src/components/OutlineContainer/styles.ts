@@ -9,6 +9,8 @@ export const Container = styled(motion.div)`
 
   max-width: 100%;
 
+  position: relative;
+
   text-decoration: none;
   background: #ffff;
   text-align: center;
