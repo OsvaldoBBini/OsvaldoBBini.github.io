@@ -122,6 +122,7 @@ Error generating stack: `+i.message+`
   text-decoration: none;
   background: #ffff;
   text-align: center;
+  font-size: 12px;
   color: ${({theme:e})=>e.colors.primary.dark};
   border-radius: 10px;
   box-shadow: 10px 10px rgba(0,0,0,0.75);
